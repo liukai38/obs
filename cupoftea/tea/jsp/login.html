@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+</head>
+<body>
+	<form action="PortalServlet" method="post">
+		<div>
+		用戶名：<input type="text" name="username" />
+		<br><br>
+		密     码：<input type="password" name="password" />
+		</div>
+		验证码:<img alt="验证码" src="ValidateImageServlet" id="validate">
+		<input type="text" name="validateCode" style="width:50px;"/>
+		<br><br>
+		<button type="submit">提交</button>
+	</form>
+</body>
+<script type="text/javascript">
+	!function(){
+		var $ =function(selector){
+			return document.querySelector(selector);
+		}
+		$("#validate").addEventListener('click',function(){
+			this.src='ValidateImageServlet?time='+new Date().getTime();
+			console.log("1111111111"+this.src);
+		});
+	}();
+</script>
+</html>
