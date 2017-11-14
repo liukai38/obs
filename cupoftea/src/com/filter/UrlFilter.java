@@ -1,4 +1,4 @@
-package com.filter;
+﻿package com.filter;
 
 import java.io.IOException;
 
@@ -14,6 +14,8 @@ public class UrlFilter implements Filter {
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
 		System.out.println("---------过滤器初始化开始");
+
+		System.out.println("---------测试提交-------");
 	}
 	
 	@Override
